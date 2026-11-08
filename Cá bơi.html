@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá</title>
+
+    <style>
+    #hoca 
+    {
+            position: fixed;
+            bottom: 0;
+            width: 98%;
+            height: 75%;
+
+            background-color: beige;
+
+            border-left: 2px double blue;
+            border-right: 2px double blue;
+
+            overflow: hidden;
+    }
+    #ca {
+    width: 180px;
+    position: absolute;
+    top: 40%;
+    left: -200px;
+
+    animation: bocoi 8s linear infinite,
+            quaydau 8s steps(1) infinite;
+        }
+    @keyframes bocoi 
+    {
+    0% 
+    {
+        left: -200px;
+    }
+
+    50% 
+    {
+        left: calc(100% - 180px);
+    }
+
+    100% 
+    {
+        left: -200px;
+    }
+}
+
+@keyframes quaydau 
+{
+    0%, 49.9% 
+    {
+        transform: scaleX(1);
+    }
+
+    50%, 100% 
+    {
+        transform: scaleX(-1);
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <div id="hoca">
+        <img src="png-clipart-anchovy-pacific-saury-oily-fish-seafood-herring-anchovy-food-animals-thumbnail.png" id="ca" alt="Con cá">
+    </div>
+
+</body>
